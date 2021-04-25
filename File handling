@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+void reverse(char[]);
+int main()
+{
+    int a[100];
+    printf("Enter a string to be reversed :");
+    gets(a);
+    reverse(a);
+    printf("Reverse of the string is : %s",a);
+    return 0;
+    }
+    void reverse(char str[])
+    {
+        int i,n;
+        for(n=0;str[n]!='\0';n++);
+        for(i=0;i<n/2;i++)
+        {
+            char ch=str[i];
+            str[i]=str[n-1-i];
+            str[n-1-i]=ch;
+
+        }
+    }
